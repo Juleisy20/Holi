@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Especial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #d81b60;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: none;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #d81b60;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        a:hover {
+            background-color: #ad1457;
+        }
+    </style>
+    <script>
+        function mostrarMensaje(event) {
+            event.preventDefault();
+            document.querySelector('h1').style.display = 'block';
+            setTimeout(() => {
+                window.open(event.target.href, '_blank');
+            }, 2000);
+        }
+        
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector('h1').style.display = 'block';
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h1>Te amo, perdón por poner tu paciencia al límite</h1>
+    <a href="file:///C:/Users/julei/Downloads/OnlyFans.html" onclick="mostrarMensaje(event)">Ir a OnlyFans</a>
+</body>
+</html>
